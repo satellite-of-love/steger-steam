@@ -1,6 +1,8 @@
 module Main exposing (main)
 
 import Html exposing (Html)
+import Html.Events
+import Html.Attributes
 
 
 
@@ -32,12 +34,16 @@ model =
 
 type Msg
     = Noop
+    | Backwards
 
 
 update : Msg -> Model -> Model
 update msg model =
     case msg of
         Noop ->
+            model
+
+        Backwards ->
             model
 
 
@@ -53,3 +59,13 @@ view model =
                 "Hello Steger!"
             ]
         ]
+
+
+backwardsButton : Html Msg
+backwardsButton =
+    Html.button
+        [ Html.Events.onClick Backwards
+        , Html.Attributes.id "backwards"
+        ]
+        [ Html.text "Backwards" ]
+
