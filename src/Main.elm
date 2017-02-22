@@ -19,12 +19,12 @@ main =
 
 
 type alias Model =
-    { message : String }
+    { message : String , say : String }
 
 
 model : Model
 model =
-    { message = "Hello Steger!" }
+    { message = "Hello Steger!" , say = "" }
 
 
 
@@ -34,6 +34,7 @@ model =
 type Msg
     = Noop
     | Backwards
+    | Say String
 
 
 update : Msg -> Model -> Model
@@ -44,6 +45,9 @@ update msg model =
 
         Backwards ->
             { model | message = "!regetS olleH" }
+
+        Say string ->
+            { model | say = string }
 
 
 
@@ -68,3 +72,14 @@ backwardsButton =
         , Html.Attributes.id "backwards"
         ]
         [ Html.text "Backwards" ]
+
+
+sayInput : Model -> Html Msg
+sayInput model =
+    Html.input
+        [ Html.Attributes.id "say"
+        , Html.Events.onInput Say
+        , Html.Attributes.value model.say
+        ]
+        []
+

@@ -86,3 +86,19 @@ editor:
     - "field_type": "String"
     - "initial_value": "Hello Steger!"
 
+---
+kind: "operation"
+client: "rug-cli 0.24.0"
+editor:
+  name: "jessitron.elm-rugs.AddTextInput"
+  group: "jessitron"
+  artifact: "elm-rugs"
+  version: "2.2.0"
+  origin:
+    repo: "git@github.com:jessitron/elm-rugs"
+    branch: "master"
+    sha: "b1b2c63*"
+  parameters:
+    - "input_name": "say"
+    - "message_name": "Say"
+
