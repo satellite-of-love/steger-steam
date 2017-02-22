@@ -69,3 +69,20 @@ editor:
     - "button_text": "Backwards"
     - "button_message": "Backwards"
 
+---
+kind: "operation"
+client: "rug-cli 0.24.0"
+editor:
+  name: "jessitron.elm-rugs.AddToModel"
+  group: "jessitron"
+  artifact: "elm-rugs"
+  version: "2.2.0"
+  origin:
+    repo: "git@github.com:jessitron/elm-rugs"
+    branch: "master"
+    sha: "b1b2c63*"
+  parameters:
+    - "field_name": "message"
+    - "field_type": "String"
+    - "initial_value": "Hello Steger!"
+

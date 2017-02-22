@@ -19,12 +19,12 @@ main =
 
 
 type alias Model =
-    {}
+    { message : String }
 
 
 model : Model
 model =
-    {}
+    { message = "Hello Steger!" }
 
 
 
