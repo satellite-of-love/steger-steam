@@ -43,7 +43,7 @@ update msg model =
             model
 
         Backwards ->
-            model
+            { model | message = "!regetS olleH" }
 
 
 
@@ -56,7 +56,7 @@ view model =
         [ backwardsButton
         , Html.h1 []
             [ Html.text
-                "Hello Steger!"
+                model.message
             ]
         ]
 
