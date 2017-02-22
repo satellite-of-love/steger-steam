@@ -3,6 +3,7 @@ module Main exposing (main)
 import Html exposing (Html)
 import Html.Events
 import Html.Attributes
+import String
 
 
 main : Program Never Model Msg
@@ -19,12 +20,12 @@ main =
 
 
 type alias Model =
-    { message : String , say : String }
+    { message : String, say : String }
 
 
 model : Model
 model =
-    { message = "Hello Steger!" , say = "" }
+    { message = "Hello Steger!", say = "" }
 
 
 
@@ -44,7 +45,7 @@ update msg model =
             model
 
         Backwards ->
-            { model | message = "!regetS olleH" }
+            { model | message = (String.reverse model.say) }
 
         Say string ->
             { model | say = string }
@@ -57,7 +58,8 @@ update msg model =
 view : Model -> Html Msg
 view model =
     Html.div []
-        [ backwardsButton
+        [ sayInput model
+        , backwardsButton
         , Html.h1 []
             [ Html.text
                 model.message
@@ -82,4 +84,3 @@ sayInput model =
         , Html.Attributes.value model.say
         ]
         []
-
