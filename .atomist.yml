@@ -40,3 +40,16 @@ generator:
     - "description": "Hello Steger"
     - "project_name": "steger-steam"
 
+---
+kind: "operation"
+client: "rug-cli 0.24.0"
+editor:
+  name: "jessitron.elm-rugs.UpgradeToBeginnerProgram"
+  group: "jessitron"
+  artifact: "elm-rugs"
+  version: "2.2.0"
+  origin:
+    repo: "git@github.com:jessitron/elm-rugs"
+    branch: "master"
+    sha: "b1b2c63*"
+
