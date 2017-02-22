@@ -1,0 +1,42 @@
+---
+kind: "operation"
+client: "rug-cli 0.19.1"
+editor:
+  name: "UpgradeFrom0_7_1"
+  group: "atomist-rugs"
+  artifact: "rug-upgrade"
+  version: "0.1.0"
+  origin:
+    repo: "atomist-rugs/rug-upgrade"
+    branch: "master"
+    sha: "e556ba9*"
+
+---
+kind: "operation"
+client: "rug-cli 0.19.1"
+editor:
+  name: "UpgradeFrom0_7_1"
+  group: "atomist-rugs"
+  artifact: "rug-upgrade"
+  version: "0.1.0"
+  origin:
+    repo: "atomist-rugs/rug-upgrade"
+    branch: "master"
+    sha: "e556ba9*"
+
+---
+kind: "operation"
+client: "rug-cli 0.24.0"
+generator:
+  name: "NewStaticPage"
+  group: "jessitron"
+  artifact: "elm-rugs"
+  version: "2.2.0"
+  origin:
+    repo: "git@github.com:jessitron/elm-rugs"
+    branch: "master"
+    sha: "b1b2c63*"
+  parameters:
+    - "description": "Hello Steger"
+    - "project_name": "steger-steam"
+
